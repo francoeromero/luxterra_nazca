@@ -9,10 +9,11 @@
 :root{
 	--alto-revista: 800px;
 }
-body{
-	background: url(../video/fondo_estatico.jpg) !important;
-	
-}
+/* body{
+	background: url(../video/fondo_estatico.jpg)no-repeat center center;
+	background-size: contain;
+	background-attachment: fixed;
+} */
 body{
 	/* overflow:hidden; */
 	overflow-x: hidden;
@@ -20,9 +21,10 @@ body{
 	/* background-color: #d7d7d7 ;
 	background-image: linear-gradient(147deg, #4f4f4f 0%, #090909 75%); */
 	/* background: url(../img/background.jpg); */
-	margin:0;
+	margin:0 !important;
 	padding:0;
-	background: #1d1d1d;
+	background: url(../video/fondo_estatico.jpg)no-repeat center center;
+	background-size: cover;
 }
 .responsive-icons{
 	display: none !important;
