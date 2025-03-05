@@ -921,6 +921,9 @@ body{
 	display: none;	
 }
 @media(max-width:1400px){
+	.loading-page{
+		scale: 1.7;
+	}
 	.flechas_responsive{
 		display: flex;
 		align-items: center;
