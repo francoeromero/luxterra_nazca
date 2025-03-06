@@ -421,6 +421,7 @@ function addPage(page, book) {
 		let webp = null;
 		let webpAnterior = null;
 		lista_webp = [
+			'./webp/test.gif',
 			'./webp/0.webp',
 			'./webp/1.webp',
 			'./webp/2.webp',
