@@ -418,29 +418,6 @@ function addPage(page, book) {
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
 
-		fondos = [
-			{
-				img:'./img/renders/Piso_1_Monoambiente_B_TOMA_02.png',
-				gif:'./gif/clip1.gif'
-			},
-			{
-				img:'./img/renders/Piso_1_Monoambiente_B_TOMA_02.jpg',
-				gif:'./gif/clip2.gif'
-			},
-			{
-				img:'./img/renders/Piso_1_Monoambiente_B_TOMA_02.jpg',
-				gif:'./gif/clip3.gif'
-			},
-		]
-		lista_mp4 = [
-			'./video/0.mp4',
-			'./video/1.mp4',
-			'./video/2.mp4',
-			'./video/3.mp4',
-			'./video/4.mp4',
-			'./video/5.mp4',
-			'./video/6.mp4'
-		];
 		lista_webp = [
 			'./webp/0.webp',
 			'./webp/1.webp',
@@ -453,10 +430,8 @@ function addPage(page, book) {
 		// Add the initial HTML
 		// It will contain a loader indicator and a gradient
 		element.html('<div class="gradient"></div><div class="loader"></div>');
-		////////////////////////////////////////////////////////////////////////
-		// Crear un elemento <div> que actuará como un cuadrado rojo
 
-		// if(page > 1 && page % 2 != 0 && page < pages){
+		// Crear un elemento <div> que actuará
 		if(page == 29 ){
 			element.append(cargarWebp_1(lista_webp[0])); 
 		}
@@ -969,7 +944,8 @@ window.addEventListener('load', () => {
     const contenedor = document.querySelector('.magazine-viewport'); // Selecciona el elemento con la clase
     if (contenedor) {
         contenedor.scrollTo({
-            left: 1000, // Cambia este valor a la posición deseada en el eje x
+            //left: 1000, // Cambia este valor a la posición deseada en el eje x
+            left: 500, // Cambia este valor a la posición deseada en el eje x
             behavior: 'smooth' // 'smooth' para desplazamiento suave o 'auto' para instantáneo
         });
     }
