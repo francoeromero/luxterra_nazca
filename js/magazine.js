@@ -22,71 +22,72 @@
 // applyResponsiveRotation();
 // window.addEventListener('resize', applyResponsiveRotation);
 
-function cargarVideo_flexible(ruta, ancho, largo, posicionX, posicionY, backgroundSize) {
-    let cargarVideo = $('<div></div>').css({
-        width: ancho,
-        height: largo,
-        position: 'absolute',
-        top: posicionY,
-        left: posicionX,
-        transform: 'translate(-50%, -50%)',
-        zIndex: '1000',
-        overflow: 'hidden'
-    });
-
-    let video = $('<video autoplay loop muted playsinline></video>').css({
-        width: '100%',
-        height: '100%',
-        objectFit: backgroundSize
-    }).append(`<source src="${ruta}" type="video/mp4">`);
-
-    // Reproducir nuevamente cuando termine
-    video.on('ended', function() {
-        video[0].play();
-    });
-
-    // Agregar el video al contenedor
-    cargarVideo.append(video);
-
-    return cargarVideo;
-}
-
-
-
-function cargarVideo_flexible(ruta, ancho, largo, posicionX, posicionY, backgroundSize) {
-    let cargarVideo = $('<div></div>').css({
-        width: ancho,
-        height: largo,
-        position: 'absolute',
-        top: posicionY,
-        left: posicionX,
-        transform: 'translate(-50%, -50%)',
-        zIndex: '1000',
-        overflow: 'hidden'
-    });
-
-    let video = $('<video autoplay loop muted playsinline></video>').css({
-        width: '100%',
-        height: '100%',
-        objectFit: backgroundSize
-    }).append(`<source src="${ruta}" type="video/mp4">`);
-
-    // Reproducir nuevamente cuando termine
-    video.on('ended', function() {
-        video[0].play();
-    });
-
-    // Agregar el video al contenedor
-    cargarVideo.append(video);
-
-    return cargarVideo;
-}
-function cargarGif_1(ruta){
+function cargarGif_flexible(ruta,ancho,largo,ubicacion_x, ubicacion_y, posicion){
+	let pos = '';
+	if (posicion == false){
+		pos = 'cover';
+	}else if (posicion == true){
+		pos = 'contain';
+	}	
+	
 	let cargarGif = $('<div></div>').css({
 		// Definir el ancho del cuadrado en 100 píxeles
-		width: '100%',
+		width: ancho,
 		// Definir la altura del cuadrado en 100 píxeles
-		height: '100%',
+		height: largo,
+		// Asignar el fondo rojo al cuadrado
+		background: `url(${ruta}) no-repeat center center`,
+		backgroundSize: 'cover',
+		zIndex: '999',
+		// Posicionar el cuadrado de forma absoluta dentro del contenedor
+		position: pos,
+		// Colocar el cuadrado en la parte superior del contenedor
+		top: ubicacion_x,
+		// border: '3px solid white',
+		// Colocar el cuadrado en la esquina izquierda del contenedor
+		left: ubicacion_y,
+		// Asegurar que el cuadrado se superponga a otros elementos mediante un z-index alto
+		transform: 'translate(-50%,-50%)',
+		zIndex: '1000'
+	});
+	return cargarGif
+}
+
+
+function cargarVideo_flexible(ruta, ancho, largo, posicionX, posicionY, backgroundSize) {
+    let cargarVideo = $('<div></div>').css({
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: posicionY,
+        left: posicionX,
+        transform: 'translate(-50%, -50%)',
+        zIndex: '1000',
+        overflow: 'hidden'
+    });
+
+    let video = $('<video autoplay loop muted playsinline></video>').css({
+        width: '100%',
+        height: '100%',
+        objectFit: backgroundSize
+    }).append(`<source src="${ruta}" type="video/mp4">`);
+
+    // Reproducir nuevamente cuando termine
+    video.on('ended', function() {
+        video[0].play();
+    });
+
+    // Agregar el video al contenedor
+    cargarVideo.append(video);
+
+    return cargarVideo;
+}
+function cargarWebp_1(ruta){
+	let cargarGif = $('<div></div>').css({
+		// Definir el ancho del cuadrado en 100 píxeles
+		width: '70%',
+		// Definir la altura del cuadrado en 100 píxeles
+		height: '55%',
 		// Asignar el fondo rojo al cuadrado
 		background: `url(${ruta}) no-repeat center center`,
 		backgroundSize: 'cover',
@@ -94,10 +95,33 @@ function cargarGif_1(ruta){
 		// Posicionar el cuadrado de forma absoluta dentro del contenedor
 		position: 'absolute',
 		// Colocar el cuadrado en la parte superior del contenedor
-		top: '50%',
+		top: '70%',
 		// border: '3px solid white',
 		// Colocar el cuadrado en la esquina izquierda del contenedor
-		left: '50%',
+		left: '55%',
+		// Asegurar que el cuadrado se superponga a otros elementos mediante un z-index alto
+		transform: 'translate(-50%,-50%)',
+		zIndex: '1000'
+	});
+	return cargarGif
+}
+function cargarWebp_2(ruta){
+	let cargarGif = $('<div></div>').css({
+		// Definir el ancho del cuadrado en 100 píxeles
+		width: '80%',
+		// Definir la altura del cuadrado en 100 píxeles
+		height: '65%',
+		// Asignar el fondo rojo al cuadrado
+		background: `url(${ruta}) no-repeat center center`,
+		backgroundSize: 'cover',
+		zIndex: '999',
+		// Posicionar el cuadrado de forma absoluta dentro del contenedor
+		position: 'absolute',
+		// Colocar el cuadrado en la parte superior del contenedor
+		top: '62%',
+		// border: '3px solid white',
+		// Colocar el cuadrado en la esquina izquierda del contenedor
+		left: '53%',
 		// Asegurar que el cuadrado se superponga a otros elementos mediante un z-index alto
 		transform: 'translate(-50%,-50%)',
 		zIndex: '1000'
@@ -416,7 +440,15 @@ function addPage(page, book) {
 			'./video/4.mp4',
 			'./video/5.mp4',
 			'./video/6.mp4'
-
+		];
+		lista_webp = [
+			'./webp/0.webp',
+			'./webp/1.webp',
+			'./webp/2.webp',
+			'./webp/3.webp',
+			'./webp/4.webp',
+			'./webp/5.webp',
+			'./webp/6.webp',
 		];
 		// Add the initial HTML
 		// It will contain a loader indicator and a gradient
@@ -426,33 +458,27 @@ function addPage(page, book) {
 
 		// if(page > 1 && page % 2 != 0 && page < pages){
 		if(page == 29 ){
-			element.append(cargarVideo_flexible(lista_mp4[0], '70%', '55%', '52%', '70%', 'cover'));
+			element.append(cargarWebp_1(lista_webp[0])); 
 		}
 		else if(page == 31){
-			element.append(cargarVideo_flexible(lista_mp4[1], '70%', '55%', '52%', '70%', 'cover'));
-			
+			element.append(cargarWebp_1(lista_webp[1])); 
 		}
 		else if(page == 33){
-			// 93.6
-			// AMPLIO 3 AMBIENTES CON BALCONES FRENTE
-			// //////////////////////////////////////////////////////////////////
-			element.append(cargarVideo_flexible(lista_mp4[2], '80%', '67%', '52%', '63%', 'cover'));
-			
+			element.append(cargarWebp_2(lista_webp[2])); 
 		}
 		else if(page == 35){
-			element.append(cargarVideo_flexible(lista_mp4[3], '80%', '67%', '52%', '63%', 'cover'));
-			
+			element.append(cargarWebp_2(lista_webp[3])); 
 			
 		}
 		else if(page == 37){
-			element.append(cargarVideo_flexible(lista_mp4[4], '80%', '67%', '52%', '63%', 'cover'));
-			// element.append(cargarGif_flexible(lista_gifs[0],'70%','55%','52%','70%','cover')); 
+			element.append(cargarWebp_2(lista_webp[4])); 
 		}
 		else if(page == 39){
-			element.append(cargarVideo_flexible(lista_mp4[5], '80%', '67%', '52%', '63%', 'cover'));
+			element.append(cargarWebp_2(lista_webp[5])); 
 		}
 		else if(page == 41){
-			element.append(cargarVideo_flexible(lista_mp4[6], '80%', '67%', '52%', '63%', 'cover'));	
+			element.append(cargarWebp_2(lista_webp[6])); 
+
 		}
 		
 
