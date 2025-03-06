@@ -407,13 +407,13 @@ function cargarGif_trama2(rutaUno, rutaDos, rutaTres, rutaCuatro) {
 
 let flag_responsivo = true;
 function checkResponsive(){
-	if(window.matchMedia('((max-width: 1400px))').matches){
+	if(window.matchMedia('(max-width: 1400px)').matches){
 		flag_responsivo = false;
 	}
 	else{
 		flag_responsivo = true;
 	}
-	console.log('flag',flag);
+	console.log('flag',flag_responsivo);
 }
 checkResponsive();
 
