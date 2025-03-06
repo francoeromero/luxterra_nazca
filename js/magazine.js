@@ -433,7 +433,7 @@ function addPage(page, book) {
 		let webpAnterior = null;
 		lista_webp = [
 			'./webp/pc/0.webp',
-			'./webp/pc/0.webp',
+			'./webp/pc/1.webp',
 			'./webp/pc/0.webp',
 			'./webp/pc/0.webp',
 			'./webp/pc/0.webp',
@@ -442,7 +442,7 @@ function addPage(page, book) {
 		];
 		lista_webp_movil = [
 			'./webp/cel/0.webp',
-			'./webp/cel/0.webp',
+			'./webp/cel/1.webp',
 			'./webp/cel/0.webp',
 			'./webp/cel/0.webp',
 			'./webp/cel/0.webp',
