@@ -421,13 +421,13 @@ function addPage(page, book) {
 		let webp = null;
 		let webpAnterior = null;
 		lista_webp = [
-			'./webp/0_OPTIMIZADO.webp',
-			'./webp/1_OPTIMIZADO.webp',
-			'./webp/2_OPTIMIZADO.webp',
-			'./webp/3_OPTIMIZADO.webp',
-			'./webp/4_OPTIMIZADO.webp',
-			'./webp/5_OPTIMIZADO.webp',
-			'./webp/6_OPTIMIZADO.webp',
+			'./webp/0.webp',
+			'./webp/1.webp',
+			'./webp/2.webp',
+			'./webp/3.webp',
+			'./webp/4.webp',
+			'./webp/5.webp',
+			'./webp/6.webp',
 		];
 
 		// Eliminar WebP existentes antes de agregar nuevos
