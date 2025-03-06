@@ -407,37 +407,50 @@ function cargarGif_trama2(rutaUno, rutaDos, rutaTres, rutaCuatro) {
 
 
 
-
 function addPage(page, book) {
-
 	var id, pages = book.turn('pages');
 
 	// Create a new element for this page
 	var element = $('<div />', {});
+	let flag = true;
+	const nextButton = document.querySelector('.next-button');
+	const previousButton = document.querySelector('.previous-button');
 
 	// Add the page to the flipbook
 	if (book.turn('addPage', element, page)) {
-
+		let webp = null;
+		let webpAnterior = null;
 		lista_webp = [
-			'./webp/0.webp',
-			'./webp/1.webp',
-			'./webp/2.webp',
-			'./webp/3.webp',
-			'./webp/4.webp',
-			'./webp/5.webp',
-			'./webp/6.webp',
+			'./webp/0_OPTIMIZADO.webp',
+			'./webp/1_OPTIMIZADO.webp',
+			'./webp/2_OPTIMIZADO.webp',
+			'./webp/3_OPTIMIZADO.webp',
+			'./webp/4_OPTIMIZADO.webp',
+			'./webp/5_OPTIMIZADO.webp',
+			'./webp/6_OPTIMIZADO.webp',
 		];
+
+		// Eliminar WebP existentes antes de agregar nuevos
+        // $('.webp-element').remove();
+
 		// Add the initial HTML
 		// It will contain a loader indicator and a gradient
 		element.html('<div class="gradient"></div><div class="loader"></div>');
+		// //////////////////////////////////////////////////////////////////////////////////
 
+
+		// //////////////////////////////////////////////////////////////////////////////////
 		// Crear un elemento <div> que actuará
-		if(page == 29 ){
-			element.append(cargarWebp_1(lista_webp[0])); 
+		if(page == 29){
+			webp = cargarWebp_1(lista_webp[0]);
+			element.append(webp);
 		}
 		else if(page == 31){
-			element.append(cargarWebp_1(lista_webp[1])); 
+			
+			webp = cargarWebp_1(lista_webp[1]);
+			element.append(webp); 
 		}
+
 		else if(page == 33){
 			element.append(cargarWebp_2(lista_webp[2])); 
 		}
@@ -461,6 +474,20 @@ function addPage(page, book) {
 		// Load the page
 		loadPage(page, element);
 	}
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Agregar un evento 'turned' al libro
+	// $('.magazine').bind('turned', function(event, page, view) {
+	// 	if(page == 29 && flag == true){
+			
+	// 		console.log('test');
+	// 		flag = false;
+	// 	}
+	// });
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 }
 

@@ -644,7 +644,8 @@ body{
 
 .magazine-viewport .previous-button-hover,
 .magazine-viewport .next-button-hover{
-	background-color:rgba(0,0,0, 0.4) ;
+	background-color:rgba(190, 142, 99, .5)
+	;
 	
 }
 
