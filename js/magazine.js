@@ -445,7 +445,7 @@ function addPage(page, book) {
 			'./webp/cel/1.webp',
 			'./webp/pc/2.webp',
 			'./webp/pc/3.webp',
-			'./webp/cel/0.webp',
+			'./webp/pc/4.webp',
 			'./webp/cel/0.webp',
 			'./webp/cel/0.webp',
 		];
