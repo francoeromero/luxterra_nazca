@@ -405,6 +405,17 @@ function cargarGif_trama2(rutaUno, rutaDos, rutaTres, rutaCuatro) {
     return contenedor;
 }
 
+let flag_responsivo = true;
+function checkResponsive(){
+	if(window.matchMedia('((max-width: 1400px))').matches){
+		flag_responsivo = false;
+	}
+	else{
+		flag_responsivo = true;
+	}
+	console.log('flag',flag);
+}
+checkResponsive();
 
 
 function addPage(page, book) {
@@ -421,13 +432,22 @@ function addPage(page, book) {
 		let webp = null;
 		let webpAnterior = null;
 		lista_webp = [
-			'./webp/0.5.webp',
-			'./webp/1.webp',
-			'./webp/2.webp',
-			'./webp/3.webp',
-			'./webp/4.webp',
-			'./webp/5.webp',
-			'./webp/6.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+			'./webp/pc/0.webp',
+		];
+		lista_webp_movil = [
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
+			'./webp/cel/0.webp',
 		];
 
 		// Eliminar WebP existentes antes de agregar nuevos
@@ -442,32 +462,78 @@ function addPage(page, book) {
 		// //////////////////////////////////////////////////////////////////////////////////
 		// Crear un elemento <div> que actuará
 		if(page == 29){
-			webp = cargarWebp_1(lista_webp[0]);
-			element.append(webp);
+			if(flag_responsivo == false){
+				webp = cargarWebp_1(lista_webp_movil[0]);
+				element.append(webp);
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_1(lista_webp[0]);
+				element.append(webp);
+			}
 		}
 		else if(page == 31){
-			
-			webp = cargarWebp_1(lista_webp[1]);
-			element.append(webp); 
+			if(flag_responsivo == false){
+				webp = cargarWebp_1(lista_webp_movil[1]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_1(lista_webp[1]);
+				element.append(webp); 
+			}
 		}
 
 		else if(page == 33){
-			element.append(cargarWebp_2(lista_webp[2])); 
+			// 3 AMBIENTES
+			if(flag_responsivo == false){
+				webp = cargarWebp_2(lista_webp_movil[2]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_2(lista_webp[2]);
+				element.append(webp); 
+			}
 		}
 		else if(page == 35){
-			element.append(cargarWebp_2(lista_webp[3])); 
-			
+			if(flag_responsivo == false){
+				webp = cargarWebp_2(lista_webp_movil[3]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_2(lista_webp[3]);
+				element.append(webp); 
+			}
 		}
 		else if(page == 37){
-			element.append(cargarWebp_2(lista_webp[4])); 
+			if(flag_responsivo == false){
+				webp = cargarWebp_2(lista_webp_movil[4]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_2(lista_webp[4]);
+				element.append(webp); 
+			}
 		}
 		else if(page == 39){
-			element.append(cargarWebp_2(lista_webp[5])); 
+			if(flag_responsivo == false){
+				webp = cargarWebp_2(lista_webp_movil[5]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_2(lista_webp[5]);
+				element.append(webp); 
+			}
 		}
 		else if(page == 41){
-			element.append(cargarWebp_2(lista_webp[6])); 
-
+			if(flag_responsivo == false){
+				webp = cargarWebp_2(lista_webp_movil[6]);
+				element.append(webp); 
+			}
+			else if(flag_responsivo == true){
+				webp = cargarWebp_2(lista_webp[6]);
+				element.append(webp); 
+			}
 		}
+
 		
 
 		//////////////////////////////////////////////////////////////////////// 
