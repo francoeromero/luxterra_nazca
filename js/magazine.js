@@ -434,19 +434,19 @@ function addPage(page, book) {
 		lista_webp = [
 			'./webp/pc/0.webp',
 			'./webp/pc/1.webp',
-			'./webp/pc/2.webp',
+			'./webp/pc/5.webp',
 			'./webp/pc/3.webp',
 			'./webp/pc/4.webp',
-			'./webp/pc/5.webp',
+			'./webp/pc/2.webp',
 			'./webp/pc/6.webp',
 		];
 		lista_webp_movil = [
 			'./webp/pc/0.webp',
 			'./webp/pc/1.webp',
-			'./webp/pc/2.webp',
+			'./webp/pc/5.webp',
 			'./webp/pc/3.webp',
 			'./webp/pc/4.webp',
-			'./webp/pc/5.webp',
+			'./webp/pc/2.webp',
 			'./webp/pc/6.webp',
 		];
 
