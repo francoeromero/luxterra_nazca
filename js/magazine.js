@@ -432,22 +432,22 @@ function addPage(page, book) {
 		let webp = null;
 		let webpAnterior = null;
 		lista_webp = [
-			'./webp/pc/0.webp',
-			'./webp/pc/1.webp',
-			'./webp/pc/3.webp',
-			'./webp/pc/x.webp',//
-			'./webp/pc/6.webp',
-			'./webp/pc/5.webp',
-			'./webp/pc/2.webp',
+			'./webp/pc/0_a.webp',
+			'./webp/pc/1_b.webp',
+			'./webp/pc/3_c.webp',
+			'./webp/pc/x_d.webp',
+			'./webp/pc/6_e.webp',
+			'./webp/pc/5_f.webp',
+			'./webp/pc/2_g.webp',
 		];
 		lista_webp_movil = [
-			'./webp/pc/0.webp',
-			'./webp/pc/1.webp',
-			'./webp/pc/3.webp',
-			'./webp/pc/x.webp',//
-			'./webp/pc/6.webp',
-			'./webp/pc/5.webp',
-			'./webp/pc/2.webp',
+			'./webp/pc/0_a.webp',
+			'./webp/pc/1_b.webp',
+			'./webp/pc/3_c.webp',
+			'./webp/pc/x_d.webp',
+			'./webp/pc/6_e.webp',
+			'./webp/pc/5_f.webp',
+			'./webp/pc/2_g.webp',
 		];
 
 		// Eliminar WebP existentes antes de agregar nuevos
