@@ -463,7 +463,7 @@ function addPage(page, book) {
 		// Crear un elemento <div> que actuará
 		if(page == 29){
 			if(flag_responsivo == false){
-				webp = cargarWebp_1(lista_webp[0]);
+				webp = cargarWebp_1(lista_webp_movil[0]);
 				element.append(webp);
 			}
 			else if(flag_responsivo == true){
@@ -473,7 +473,7 @@ function addPage(page, book) {
 		}
 		else if(page == 31){
 			if(flag_responsivo == false){
-				webp = cargarWebp_1(lista_webp[1]);
+				webp = cargarWebp_1(lista_webp_movil[1]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
@@ -485,7 +485,7 @@ function addPage(page, book) {
 		else if(page == 33){
 			// 3 AMBIENTES
 			if(flag_responsivo == false){
-				webp = cargarWebp_2(lista_webp[2]);
+				webp = cargarWebp_2(lista_webp_movil[2]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
@@ -495,7 +495,7 @@ function addPage(page, book) {
 		}
 		else if(page == 35){
 			if(flag_responsivo == false){
-				webp = cargarWebp_2(lista_webp[3]);
+				webp = cargarWebp_2(lista_webp_movil[3]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
@@ -505,7 +505,7 @@ function addPage(page, book) {
 		}
 		else if(page == 37){
 			if(flag_responsivo == false){
-				webp = cargarWebp_2(lista_webp[4]);
+				webp = cargarWebp_2(lista_webp_movil[4]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
@@ -515,7 +515,7 @@ function addPage(page, book) {
 		}
 		else if(page == 39){
 			if(flag_responsivo == false){
-				webp = cargarWebp_2(lista_webp[5]);
+				webp = cargarWebp_2(lista_webp_movil[5]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
@@ -525,7 +525,7 @@ function addPage(page, book) {
 		}
 		else if(page == 41){
 			if(flag_responsivo == false){
-				webp = cargarWebp_2(lista_webp[6]);
+				webp = cargarWebp_2(lista_webp_movil[6]);
 				element.append(webp); 
 			}
 			else if(flag_responsivo == true){
